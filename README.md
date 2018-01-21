@@ -1,6 +1,48 @@
 # kotlin
 Tutorials and that sort of stuff for the new language kotlin
 
+Installing the SDK:
+
+```
+$ curl -s https://get.sdkman.io | bash
+```
+Now open a new terminal and install it:
+```
+sdk install kotlin
+```
+
+#### Hello world
+
+```sh
+cat > hello.kt
+fun main(args: Array<String>){
+  println("Hello")
+}
+^D
+```
+Now call the kotlin compiler `kotlinc`
+```sh
+kotlinc hello.tk -include-runtime -d hello.jar
+```
+
+This generates the `jar` file `hello.jar` as specified in the last command with
+the option `-d` to run the programm use the usuar java command:
+```
+java -jar hello.jar
+```
+
+
+### Kotlin REPL
+
+To run the compiler without parameters to have a python style interactive shell
+Just run the compiler without input parameters.
+```
+kotlinc
+Welcome to Kotlin version 1.2.20 (JRE 1.8.0_141-b16)
+Type :help for help, :quit for quit
+>>>
+```
+
 
 > http://kotlinlang.org/
 [Kotlin is a] statically typed programming language for modern multiplatform applications.
